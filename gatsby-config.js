@@ -1,3 +1,4 @@
+const path = require('path')
 require(`dotenv`).config({
   path: `.env`,
 })
@@ -13,6 +14,12 @@ module.exports = {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        lplugins: path.join(__dirname, 'plugins')
+      }
+    },
     {
       resolve: 'gatsby-plugin-vssue',
       options: getvssopts()
