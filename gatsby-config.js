@@ -2,11 +2,21 @@ require(`dotenv`).config({
   path: `.env`,
 })
 
+const getvssopts = ()=>{
+  const { VSSUE_OWNER, VSSUE_REPO, VSSUE_CLIENTID, VSSUE_CLIENT_SECRET } = process.env
+  let opts = {owner:VSSUE_OWNER, repo:VSSUE_REPO, clientId:VSSUE_CLIENTID, clientSecret:VSSUE_CLIENT_SECRET}
+  return opts
+}
+
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-vssue',
+      options: getvssopts()
+    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
