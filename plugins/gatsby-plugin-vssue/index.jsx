@@ -10,13 +10,13 @@ let vssopts = {
     autoCreateIssue: true
 }
 
-console.log('VSSUE_OWNER=', process.env.VSSUE_OWNER)
+console.log('VSSUE_OWNER=', process.env.GATSBY_VSSUE_OWNER)
 
 let GATSBY_VSSUE_OPTS={
-  clientId: process.env.VSSUE_CLIENTID,
-  clientSecret: process.env.VSSUE_CLIENT_SECRET,
-  owner: process.env.VSSUE_OWNER,
-  repo: process.env.VSSUE_REPO
+  clientId: process.env.GATSBY_VSSUE_CLIENTID,
+  clientSecret: process.env.GATSBY_VSSUE_CLIENT_SECRET,
+  owner: process.env.GATSBY_VSSUE_OWNER,
+  repo: process.env.GATSBY_VSSUE_REPO
 }
 
 vssopts = { ...vssopts, ...GATSBY_VSSUE_OPTS}
