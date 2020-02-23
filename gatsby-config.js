@@ -19,6 +19,13 @@ module.exports = {
         lplugins: path.join(__dirname, 'plugins')
       }
     },
+    {
+      resolve: `gatsby-plugin-global-styles`,
+      options: {
+        pathToConfigModule: `src/utils/GlobalStyleComponent`,
+        props: {  }
+      }
+    },
     'gatsby-plugin-vssue',
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,

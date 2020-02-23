@@ -1,0 +1,14 @@
+import { createGlobalStyle, css } from '@nfront/global-styles';
+
+const globalStyle = css`
+  article.markdown-body {
+    color: #bdcfe0;
+  }
+`;
+
+
+const GlobalStyleComponent = createGlobalStyle`
+  ${globalStyle}
+`;
+
+export default GlobalStyleComponent;
