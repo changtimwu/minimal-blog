@@ -1,17 +1,16 @@
 const path = require('path')
-require(`dotenv`).config({
-  path: `.env`,
-})
-
-const getvssopts = ()=>{
-  const { VSSUE_OWNER, VSSUE_REPO, VSSUE_CLIENTID, VSSUE_CLIENT_SECRET } = process.env
-  let opts = {owner:VSSUE_OWNER, repo:VSSUE_REPO, clientId:VSSUE_CLIENTID, clientSecret:VSSUE_CLIENT_SECRET}
-  return opts
-}
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    newstuff:'',
+    siteTitle: `Tim's Hacking Diary`,
+    siteTitleAlt: `Tim's Hacking Diary`,
+    author: 'Tim Wu',
+    siteImage: `blogcover.jpg`,
+    siteLanguage: ['en' ],
+    siteDescription: 'personal thoughts',
+    siteUrl: 'https://timini.netlify.com',
+    siteHeadline: `Do one thing and do it well`
   },
   plugins: [
     {
@@ -20,10 +19,7 @@ module.exports = {
         lplugins: path.join(__dirname, 'plugins')
       }
     },
-    {
-      resolve: 'gatsby-plugin-vssue',
-      options: getvssopts()
-    },
+    'gatsby-plugin-vssue',
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
@@ -40,12 +36,8 @@ module.exports = {
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
+            url: `https://twitter.com/changtimwu`,
+          }
         ],
       },
     },
