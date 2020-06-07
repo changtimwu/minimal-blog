@@ -5,6 +5,28 @@ tags:
   - Novel
 ---
 
+Lets start from a simple MDX:
+
+## Hello, *world*!
+
+Below is an example of JSX embedded in Markdown. <br /> **Try and change
+the background color!**
+
+<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
+  <h3>This is JSX</h3>
+</div>
+
+-------
+
+import Hello from "./Hello";
+
+write something
+
+
+<Hello name="Tim"/>
+
+-----------
+
 import SpotifyPlayer from "./SpotifyPlayer";
 
 Here will a React component go:
@@ -16,6 +38,8 @@ Here will a React component go:
   view="list"
 />
 
+-----------
+
 Here will a live code example go:
 
 ```js react-live
@@ -25,6 +49,10 @@ const onClick = () => {
 render(<button onClick={onClick}>Alohomora!</button>);
 ```
 
+another example
+```js react-live
+render(<button> Hello </button>)
+```
 Here will a normal code block go:
 
 ```js
@@ -47,6 +75,18 @@ var treePromise = new Promise(function(resolve) {
 		}
 	});
 });
+```
+
+How about languages other than js
+```c
+#include <stdio.h>
+int main( int argc, char *argv[]) {
+  int i;
+  for(i=0;i<10;i++){
+    printf("hello %d\n", i)
+  }
+  return 0;
+}
 ```
 
 Code block with code highlighting:
